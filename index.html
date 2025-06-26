@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic Tac Toe</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,
+  %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E
+  %3Ctext x='10' y='70' font-size='80' font-family='Arial'%3E%23%3C/text%3E
+  %3C/svg%3E">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="modeSelector">
+    <h2>Select Game Mode</h2>
+    <button onclick="selectMode('ai')">Play vs CHITTI 🤖</button>
+    <button onclick="selectMode('human')">2 Players 👥</button>
+  </div>
+
+  <div id="introMessage">
+    🤖 Welcome, <strong>Dr. Vaseegaran</strong>.<br />
+    You're playing against the intelligent robot <strong>CHITTI</strong>.<br />
+    Good luck!
+    <br /><br />
+    <button onclick="closeIntro()">Start Game</button>
+  </div>
+
+  <div id="startingStatus">X vs O</div>
+
+  <div id="nameInputModal">
+    <form id="nameForm" onsubmit="submitNames(event)">
+      <h3>Enter Player Names</h3>
+      <input type="text" id="player1Input" value="Player 1" />
+      <input type="text" id="player2Input" value="Player 2" />
+      <button type="submit">Start Game</button>
+    </form>
+  </div>
+
+
+  <div id="container">
+    <div class="row">
+      <div id="row1col1"></div>
+      <div id="row1col2"></div>
+      <div id="row1col3"></div>
+    </div>
+    <div class="row">
+      <div id="row2col1"></div>
+      <div id="row2col2"></div>
+      <div id="row2col3"></div>
+    </div>
+    <div class="row">
+      <div id="row3col1"></div>
+      <div id="row3col2"></div>
+      <div id="row3col3"></div>
+    </div>
+  </div>
+
+
+  <div id="gameStatus">
+    <span id="status"></span>
+    <button id="restart">Play Again</button>
+  </div>
+
+  <footer>
+    <p>Developed by <a href="https://github.com/ihSomik/tic-tac-toe" class="chitti-link" target="_blank">Chitti</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
